@@ -140,7 +140,7 @@ Javascript Code
     
     /* Utility function to show a loss message and reduce player money */
     function showLossMessage() {
-        credits -= playerBet;
+        credits -= bet;
         console.log ("You've Lost!");
         resetFruitTally();
     }
@@ -350,11 +350,13 @@ Javascript Code
             else {
                 winnings = bet * 1;
             }
-            winNumber++;            
+            winNumber++;
+            showWinMessage();            
         }
             else
         {
-            lossNumber++;            
+            lossNumber++;    
+            showLossMessage();        
         }
     }
     

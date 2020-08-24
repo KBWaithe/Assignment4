@@ -376,11 +376,13 @@ Functionality for the slot machine
             }
             else {
                 winnings = bet * 1;
-            }           
+            }
+            winNumber++;           
             showWinMessage();
         } 
         else 
-        {            
+        {   
+            lossNumber++;         
             showLossMessage();                   
         }
     }
